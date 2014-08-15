@@ -1,22 +1,39 @@
-extend layout
+block vars
+  - var page_name='Press'
+  - var slug='press'
+  - var section='about'
+  - var layout='left-sidebar'
+ 
+extends layout
+ 
+mixin articles
+  article
+    .row
+      .large-3.columns
+        br
+        a.th(href="press-single.html", rel="pemarlink")
+          img(src="http://placehold.it/200x200&text=[img]")
+      .large-9.columns
+        a(href="press-single.html", rel="pemarlink")
+          h2.article-title Article Title Lorim Ipsum
+        p posted by: Author's name on <b>August 8, 2011</b>
+        p Excerpt donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.
+        p.text-right
+          a.button.small(href="press-single.html") Read more <i class="icon-arrow-right"></i>
+  hr
+  article
+    .row
+      .large-12.columns
+        a(href="press-single.html", rel="pemarlink")
+          h2.article-title Sem Lorem Pellentesque Quam
+        p posted by: Author's name on <b>August 8, 2011</b>
+        p Excerpt onec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        p.text-right
+          a.button.small(href="press-single.html") Read more <i class="icon-arrow-right"></i>
+  hr
+ 
 block content
-  p
-    | Vykes hendrerit arcu sed erat molestie
-    | vehicula. Sed auctor neque eu tellus
-    | rhoncus ut eleifend nibh porttitor. Ut in.
-  p
-    | Donec congue lacinia dui, a porttitor
-    | lectus condimentum laoreet. Nunc eu
-    | ullamcorper orci. Quisque eget odio ac
-    | lectus vestibulum faucibus eget in metus.
-    | In pellentesque faucibus vestibulum. Nulla
-    | at nulla justo, eget luctus tortor.
-block sidebar
-  .widget
-    h1 Widget
-    p
-      | Sed auctor neque eu tellus rhoncus ut
-      | eleifend nibh porttitor. Ut in nulla enim.
-    p
-      | Vivamus hendrerit arcu sed erat molestie
-      | vehicula.
+  h1.page-title #{page_name}
+  mixin articles
+  mixin articles
+  mixin articles

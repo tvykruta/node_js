@@ -5,17 +5,21 @@
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
-var morgan = require('morgan')
+  , morgan = require('morgan')
+  , foundation = require('foundation')
+// Note, this is foundation 4.2, we want 5.0.
 
 var app = express()
 function compile(str, path) {
   return stylus(str)
     .set('filename', path)
-    .use(nib())
+    //.use(nib())
+    .use(foundation());
 }
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
+
 app.use(morgan('combined'))
 app.use(stylus.middleware(
   { src: __dirname + '/public'
@@ -29,4 +33,5 @@ app.get('/', function (req, res) {
   { title: 'Home' }
   )
 })
+console.log("Server running at http://localhost:3000/");
 app.listen(3000)

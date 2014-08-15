@@ -1,0 +1,32 @@
+/*
+ * Module dependencies
+ * http://clock.co.uk/blog/a-simple-website-in-nodejs-with-express-jade-and-stylus
+ */
+var express = require('express')
+  , stylus = require('stylus')
+  , nib = require('nib')
+var morgan = require('morgan')
+
+var app = express()
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .use(nib())
+}
+
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jade')
+app.use(morgan('combined'))
+app.use(stylus.middleware(
+  { src: __dirname + '/public'
+  , compile: compile
+  }
+))
+app.use(express.static(__dirname + '/public'))
+// Start server
+app.get('/', function (req, res) {
+  res.render('index',
+  { title: 'Home' }
+  )
+})
+app.listen(3000)

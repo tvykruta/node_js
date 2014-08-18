@@ -1,39 +1,70 @@
 block vars
-  - var page_name='Press'
+  - var page_name='Machines In Medicine'
   - var slug='press'
   - var section='about'
   - var layout='left-sidebar'
  
 extends layout
  
-mixin articles
-  article
+mixin intros
+  div.intro1
     .row
+      .large-12.columns.video_background.text-center
+        video.video_scale(id="video_background" src="../videos/stock-footage.mp4" autoplay loop)
+      .large-12.columns.text-center.vertical-align
+        h1 MACHINE VISION IN MEDICAL IMAGING
+      .large-12.columns.text-center
+        button Request an invite
+  div.text-center
+      .row
+        .large-12.columns.text-center
+          img(src="../images/icons/down_small.png" alt="Scroll down.")
+  div.main-content.text-center
+    .row
+      .medium-8.medium-centered.columns.centered-text
+        h4.subheader.margin-top-40px The most accurate computer aided diagnosis system ever built. We leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
+  div.main-content.text-center
+    .row
+      hr
+      h2.margin-top-40px How we're different.
       .large-3.columns
-        br
-        a.th(href="press-single.html", rel="pemarlink")
-          img(src="http://placehold.it/200x200&text=[img]")
-      .large-9.columns
-        a(href="press-single.html", rel="pemarlink")
-          h2.article-title Article Title Lorim Ipsum
-        p posted by: Author's name on <b>August 8, 2011</b>
-        p Excerpt donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.
-        p.text-right
-          a.button.small(href="press-single.html") Read more <i class="icon-arrow-right"></i>
-  hr
-  article
+         img(src="../images/icons/compass.png")
+         h3 Accuracy
+         p 93% specifity and 95% sensitivity. Learn more.
+      .large-3.columns
+         img(src="../images/icons/doctor1.png")
+         h3 Human Assistant
+         p Designed to improve confidence and speed of radiologists, not replace them.
+      .large-3.columns
+         img(src="../images/icons/needle.png")
+         h3 Acute
+         p Early detection of malignant <3mm nodules.
+      .large-3.columns
+         img(src="../images/icons/stopwach-128.png")
+         h3 Instant
+         p Highly detailed report available in seconds.
+     hr
+  div.main-content.text-center
+     .row
+       .medium-8.medium-centered.columns.centered-text
+         h2 Made for Radiologists
+         h4.subheader The most accurate computer aided diagnosis system ever built. We leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
+        hr
+  div.intro3.text-center
+    .row
+      .large-12.columns.text-center
+        h1 EARLY TRIALS STARTING NOW.
+      .large-12.columns.text-center
+        button Start your free trial
+  div.intro4.text-center
     .row
       .large-12.columns
-        a(href="press-single.html", rel="pemarlink")
-          h2.article-title Sem Lorem Pellentesque Quam
-        p posted by: Author's name on <b>August 8, 2011</b>
-        p Excerpt onec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        p.text-right
-          a.button.small(href="press-single.html") Read more <i class="icon-arrow-right"></i>
+        h1 Computer science indistinguisble from magic.
+  div.intro5.text-center
+    .row
+      .large-12.columns
+        h1 Computer science indistinguisble from magic.
+        p This is an intro section
   hr
- 
 block content
-  h1.page-title #{page_name}
-  mixin articles
-  mixin articles
-  mixin articles
+  mixin intros

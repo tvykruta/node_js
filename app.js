@@ -7,7 +7,6 @@ var express = require('express')
   , nib = require('nib')
   , morgan = require('morgan')
   , foundation = require('foundation')
-// Note, this is foundation 4.2, we want 5.0.
 
 var app = express()
 function compile(str, path) {

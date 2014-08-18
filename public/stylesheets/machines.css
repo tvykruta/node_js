@@ -1,0 +1,76 @@
+.top-bar h1 {
+    color: white; }
+
+.intro1 { 
+  width: 100%;
+  height: 655px;
+  min-height: 655px;
+  overflow: hidden; }
+.intro1 h1 {
+    font-size: 5em;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0;
+    line-height: 100%; }
+.vertical-align {
+    top: -50px; }
+.video_background {
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto; 
+  top: 150px;
+  -webkit-transform: scale(2.2); 
+  -moz-transform: scale(2.2); }
+
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; }
+
+.main-content { 
+  width: 100%; 
+  margin: 44px 0 22px;
+  padding-bottom: 22px; }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 {
+    font-style: normal;
+    font-weight: 300; }
+.main-content h1 {
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  line-height: 100%; }
+.main-content h4 {
+  margin: 44px 0 22px;
+  padding-bottom: 22px; }
+.margin-top-40px {
+    margin-top: 40px; }
+
+.intro3 { 
+  background-color: white;
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/doctors.jpg); 
+  background-attachment: fixed;
+  background-position: 50% 0;  }
+.intro3 h1 {
+    margin: 44px 0 422px;
+    margin-top: 200px;
+    font-size: 5em;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 100px;
+    line-height: 100%; }
+.intro4 { 
+  width: 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: 50% 0; }
+.intro5 { 
+  background-image: url(../images/home-bg.jpg); 
+  width: 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: 50% 0; }

@@ -2,14 +2,29 @@ doctype
 html
   head
     title #{title} - My Site
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/foundation-5.3.3/css/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/machines.css')
+    script(type='text/javascript' src='/jquery/jquery.js')
+    script(type='text/javascript' src='/foundation-5.3.3/js/foundation/foundation.js')
   body
-    header
-      h1 My Site
+    div.contain-to-grid.sticky
+      nav.top-bar(data-topbar data-options="sticky_on: large")
+        ul.title-area
+          li.name
+            h1#title Machines In Medicine
+          li.toggle-topbar.menu-icon
+            a(href="#")
+              span Menu
+        section.top-bar-section
+          ul.right
+            li.active
+              a(href="#") Login
+            li.has-dropdown
+              a(href="#") Technology
+              ul.dropdown 
+                li
+                  a(href="#") First link in dropdown
     .container
-      .main-content
-        block content
-      .sidebar
-        block sidebar
+      block content
     footer
-      p Running on node with Express, Jade and Stylus
+      p Confidential.

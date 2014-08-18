@@ -1,0 +1,32 @@
+block vars
+  - var page_name='Machines In Medicine'
+  - var slug='press'
+  - var section='about'
+  - var layout='left-sidebar'
+ 
+extends layout
+ 
+block content
+   div.action_panel
+    .row.action_panel
+      .medium-4.columns.action_panel
+        .panel.callout.radius
+          h4 Send DICOM
+          hr
+          p Select DICOM files from a patient.
+          button Select File(s)
+          input(type='text' placeholder='file(s)')
+      .medium-4.columns.action_panel
+        .panel
+          h4 Analyze
+          hr
+          p Wait while our classifier analyzes your data and generates a detailed report.
+          button.alert.disabled Start Analysis
+        div.progress.large-12
+          span.meter(style="width: 1%")
+      .medium-4.columns.action_panel
+        .panel
+          h4 View
+          hr
+          p Results will be available for viewing shortly.
+          button.disabled View

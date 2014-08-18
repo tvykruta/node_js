@@ -25,11 +25,25 @@ app.use(stylus.middleware(
   }
 ))
 app.use(express.static(__dirname + '/public'))
-// Start server
+
 app.get('/', function (req, res) {
   res.render('index',
   { title: 'Home' }
   )
 })
+
+app.get('/login', function (req, res) {
+  res.render('login',
+  { title: 'Login' }
+  )
+})
+
+app.get('/machine', function (req, res) {
+  res.render('machine',
+  { title: 'Machine' }
+  )
+})
+
+// Start server
 console.log("Server running at http://localhost:3000/");
 app.listen(3000)

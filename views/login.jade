@@ -1,0 +1,22 @@
+block vars
+  - var page_name='Machines In Medicine'
+  - var slug='press'
+  - var section='about'
+  - var layout='left-sidebar'
+ 
+extends layout
+ 
+mixin login
+  div
+    .row
+      .medium-4.columns
+        form(method="post", action="/login")
+          .row.collapse.margintop-20px
+            .small-4.medium-4.columns
+              input(type='text' placeholder='email')
+            .small-4.medium-4.columns
+              input(type='text' placeholder='password')
+            .small-4.medium-4.columns
+              input.postfix.small.button.expand(type='submit' href="#" value='Login')
+block content
+  mixin login

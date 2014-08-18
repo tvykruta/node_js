@@ -4,10 +4,9 @@ html
     title #{title} - My Site
     link(rel='stylesheet', href='/foundation-5.3.3/css/foundation.css')
     link(rel='stylesheet', href='/stylesheets/machines.css')
-    script(type='text/javascript' src='/jquery/jquery.js')
-    script(type='text/javascript' src='/foundation-5.3.3/js/foundation/foundation.js')
+    script(type='text/javascript' src='/foundation-5.3.3/js/vendor/modernizr.js')
   body
-    div.contain-to-grid.sticky
+    div.contain-to-grid
       nav.top-bar(data-topbar data-options="sticky_on: large")
         ul.title-area
           li.name
@@ -18,13 +17,18 @@ html
         section.top-bar-section
           ul.right
             li.active
-              a(href="#") Login
+              a(href="/login") Login
             li.has-dropdown
               a(href="#") Technology
               ul.dropdown 
                 li
-                  a(href="#") First link in dropdown
+                  a(href="machine") How our classifier works
     .container
       block content
     footer
-      p Confidential.
+      p
+    script(type='text/javascript' src='/foundation-5.3.3/js/vendor/jquery.js')
+    script(type='text/javascript' src='/foundation-5.3.3/js/vendor/fastclick.js')
+    script(type='text/javascript' src='/foundation-5.3.3/js/foundation.min.js')
+    script
+      $(document).foundation();

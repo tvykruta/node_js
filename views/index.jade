@@ -27,10 +27,12 @@ mixin intros
     .row
       hr
       h2.margin-top-40px How we're different.
+      br
       .large-3.columns
          img(src="../images/icons/compass.png")
          h3 Accuracy
-         p 93% specifity and 95% sensitivity. Learn more.
+         p <strong>93%</strong> specificity and <strong>95%</strong> sensitivity.
+         a(href="#") Learn More →
       .large-3.columns
          img(src="../images/icons/doctor1.png")
          h3 Human Assistant
@@ -38,18 +40,27 @@ mixin intros
       .large-3.columns
          img(src="../images/icons/needle.png")
          h3 Acute
-         p Early detection of malignant <3mm nodules.
+         p Early detection of <strong>early stage, malignant</strong> nodules.
       .large-3.columns
          img(src="../images/icons/stopwach-128.png")
          h3 Instant
          p Highly detailed report available in seconds.
-     hr
+         a(href="#") Learn More →
+    br
+    br
+    br
+    hr
   div.main-content.text-center
      .row
-       .medium-8.medium-centered.columns.centered-text
-         h2 Made for Radiologists
-         h4.subheader The most accurate computer aided diagnosis system ever built. We leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
+        .medium-8.medium-centered.columns.centered-text
+          h2 Made for Radiologists
+          h4.subheader The most accurate computer aided diagnosis system ever built. We  leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
         hr
+        br
+        br
+        br
+        br
+        br
   div.intro3.text-center
     .row
       .large-12.columns.text-center
@@ -58,8 +69,29 @@ mixin intros
         a.button(href="/machine") Start your free trial
   div.intro4.text-center
     .row
-      .large-12.columns
-        h1 Computer science indistinguisble from magic.
+      .medium-4.columns.action_panel
+        .panel.callout.radius
+          h4 Send DICOM
+          hr
+          p Select DICOM files from a patient.
+      .medium-4.columns.action_panel
+        .panel
+          h4 Analyze
+          hr
+          p Wait while our classifier analyzes your data and generates a detailed report.
+      .medium-4.columns.action_panel
+        .panel
+          h4 View
+          hr
+          p Results will be available for viewing shortly.
+  div
+    .row
+      .medium-6.columns
+        .panel
+          img(src="../images/ct.png" width="50%" height="50%")
+      .medium-6.columns
+        .panel
+          img(src="../images/ct-analyzed.png" width="50%" height="50%")
   div.intro5.text-center
     .row
       .large-12.columns

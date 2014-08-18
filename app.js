@@ -6,7 +6,6 @@ var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , morgan = require('morgan')
-  , foundation = require('foundation')
 
 var app = express()
 function compile(str, path) {

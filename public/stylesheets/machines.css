@@ -91,3 +91,22 @@
   margin:0;
   padding:0;
 }
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+  /*background-color:rgba(230,230,230,1.0);*/
+  background-color: #222222;
+}
+/*
+.sub-nav {
+  .sub-nav dt,
+  .sub-nav dd,
+  .sub-nav li {
+    color: blue;
+    .sub-nav dt a,
+    .sub-nav dd a,
+    .sub-nav li a {
+      color: blue;
+    }
+  }
+}
+*/

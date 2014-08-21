@@ -18,15 +18,35 @@ mixin intros
   div.text-center
       .row
         .large-12.columns.text-center
-          img(src="../images/icons/down_small.png" alt="Scroll down.")
+          a(href="#mission")
+            img(src="../images/icons/down_small.png" alt="Scroll down.")
+  div(data-magellan-expedition="fixed")
+    dl.sub-nav
+      dd(data-magellan-arrival="mission")
+        a(href="#mission") Our Mission
+      dd(data-magellan-arrival="different")
+        a(href="#different") How we're different
+      dd(data-magellan-arrival="for_radiologists")
+        a(href="#for_radiologists") For Radiologists
+      dd(data-magellan-arrival="why_we_exist")
+        a(href="#why_we_exist") Why we exist
+      dd(data-magellan-arrival="early_trials")
+        a(href="#early_trials") Early Trials
   div.main-content.text-center
     .row
       .medium-8.medium-centered.columns.centered-text
+        br
+        br
+        br
+        a(name="mission" data-magellan-destination="mission")
         h4.subheader.margin-top-40px The most accurate computer aided diagnosis system ever built. We leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
   div.main-content.text-center
     .row
       hr
-      h2.margin-top-40px How we're different.
+      br
+      br
+      a(name="different" data-magellan-destination="different")
+      h2 How we're different.
       br
       .large-3.columns
          img(src="../images/icons/compass.png")
@@ -52,6 +72,7 @@ mixin intros
     hr
   div.main-content.text-center
      .row
+        a(name="for_radiologists" data-magellan-destination="for_radiologists")
         .medium-8.medium-centered.columns.centered-text
           h2 Made for Radiologists
           h4.subheader The most accurate computer aided diagnosis system ever built. We  leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.

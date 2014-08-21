@@ -1,6 +1,7 @@
 .top-bar h1 {
-    color: white; }
-
+    color: white }
+.top-bar-section ul li > a {
+    font-weight: lighter; }
 .intro1 { 
   width: 100%;
   height: 655px;

@@ -5,8 +5,13 @@ block content
       .row
         h2 Sign up for early access.
     section
+     .divider
       br
       br
+      .row
+       .medium-4.columns
+          h4 Sign up for early access. It's free.
+          p Upload as many DICOM files as you wish and get free analysis.
       form(method="post", action="/signup")
         .row
           .medium-4.columns
@@ -19,13 +24,14 @@ block content
             input(type='text' placeholder='company')
         .row
           .medium-4.columns
-            input(type='email' placeholder='describe your job')
+            input(type='text' placeholder='describe your job')
         .row
           .medium-4.columns
             input(type='text' placeholder='comments')
         .row
           .medium-4.columns
-            input(type='checkbox')
+            input(id="emailme" type='checkbox')
+            label(for="emailme") Email me with important updates.  
         .row
           .medium-4.columns
               input.postfix.small.button.expand(type='submit' href="#" value='Submit')

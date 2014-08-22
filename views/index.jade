@@ -7,20 +7,20 @@ block vars
 extends layout
  
 mixin intros
-  div.intro1
+  section.intro1
     .row
       .large-12.columns.video_background.text-center
         video.video_scale(id="video_background" src="../videos/stock-footage.mp4" autoplay loop poster="../videos/stock-footage-still.png")
       .large-12.columns.text-center.vertical-align
         h1 MACHINE VISION IN MEDICAL IMAGING
       .large-12.columns.text-center
-        a.button(href="/login") Request an invite
-  div.text-center
+        a.button(href="/signup") Request an invite
+  .text-center
       .row
         .large-12.columns.text-center
           a(href="#mission")
             img(src="../images/icons/down_small.png" alt="Scroll down.")
-  div(data-magellan-expedition="fixed")
+  section(data-magellan-expedition="fixed")
     dl.sub-nav
       dd(data-magellan-arrival="mission")
         a(href="#mission") Our Mission
@@ -32,32 +32,37 @@ mixin intros
         a(href="#why_we_exist") Why we exist
       dd(data-magellan-arrival="early_trials")
         a(href="#early_trials") Early Trials
-  div.main-content.text-center
+  section.main-content.text-center
     .row
-      .medium-8.medium-centered.columns.centered-text
-        br
-        br
-        br
+      .medium-8.medium-centered.columns
         a(name="mission" data-magellan-destination="mission")
-        h4.subheader.margin-top-40px The most accurate computer aided diagnosis system ever built. We leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
-  div.main-content.text-center
+        h2 Our Mission
+        h4 Bring machine vision and cloud computing to medical imaging.
+  section.main-content.inverse
     .row
-      hr
-      br
-      br
+      .medium-6.columns
+        a(name="mission" data-magellan-destination="mission")
+        h2 The Problem
+        h4 Late or missed detection of <strong>lung cancer</strong> from chest CT due to human error, fatigue and inexperience.
+      .medium-6.columns
+        a(name="mission" data-magellan-destination="mission")
+        h2 Our Solution
+        h4 A next generation <strong>medical imaging A.I.</strong> that leverages machine vision in the cloud to assist radiologists with cancer detection.
+  section.main-content.text-center
+    .row
       a(name="different" data-magellan-destination="different")
       h2 How we're different.
       br
-      .large-3.columns
+      .large-3.columns.divider
          img(src="../images/icons/compass.png")
          h3 Accuracy
-         p <strong>93%</strong> specificity and <strong>95%</strong> sensitivity.
+         p Unparalleled accuracy.<br><strong>93%</strong> specificity.<br><strong>95%</strong> sensitivity.
          a(href="#") Learn More →
-      .large-3.columns
+      .large-3.columns.divider
          img(src="../images/icons/doctor1.png")
-         h3 Human Assistant
-         p Designed to improve confidence and speed of radiologists, not replace them.
-      .large-3.columns
+         h3 In the cloud
+         p No special software needed. Upload your DICOM to the cloud from any web browser.
+      .large-3.columns.divider
          img(src="../images/icons/needle.png")
          h3 Acute
          p Early detection of <strong>early stage, malignant</strong> nodules.
@@ -66,58 +71,65 @@ mixin intros
          h3 Instant
          p Highly detailed report available in seconds.
          a(href="#") Learn More →
-    br
-    br
-    br
-    hr
-  div.main-content.text-center
+  hr
+  section.main-content.text-center
      .row
         a(name="for_radiologists" data-magellan-destination="for_radiologists")
-        .medium-8.medium-centered.columns.centered-text
+        .medium-8.medium-centered.columns
           h2 Made for Radiologists
           h4.subheader The most accurate computer aided diagnosis system ever built. We  leverage cloud computing, machine vision and machine learning. The classifier is trained only from real CT images under supervision of a team of expert radiologists.
-        hr
-        br
-        br
-        br
-        br
-        br
-  div.intro3.text-center
+  section.main-content.text-center.inverse
+     .row
+        a(name="for_radiologists" data-magellan-destination="for_radiologists")
+        .medium-8.medium-centered.columns
+          h2 The Hard Truth about Lung Cancer
+          hr
+          h4 Lung cancer causes more deaths than the next 3 deadliest cancers <strong>combined</strong>.
+          h4 <strong>160,000</strong> americans will die in 2014. <strong>1.3 million</strong> worldwide.
+          h4 5 year survival rate is 16.6%, <strong>lowest of all leading cancers.</strong>
+          h4 Over half of people <strong>die within one year</strong> of being diagnosed.
+          h4 Only 15% are diagnosed early. Late detection survival is <strong>3.9%</strong>.
+  section.intro3.text-center
     .row
       .large-12.columns.text-center
         h1 EARLY TRIALS STARTING NOW.
       .large-12.columns.text-center
-        a.button(href="/machine") Start your free trial
-  div.intro4.text-center
+        a.button(href="/signup") Start your free trial
+  section.main-content
     .row
-      .medium-4.columns.action_panel
-        .panel.callout.radius
-          h4 Send DICOM
-          hr
-          p Select DICOM files from a patient.
-      .medium-4.columns.action_panel
-        .panel
-          h4 Analyze
-          hr
-          p Wait while our classifier analyzes your data and generates a detailed report.
-      .medium-4.columns.action_panel
-        .panel
-          h4 View
-          hr
-          p Results will be available for viewing shortly.
-  div
+      .medium-3.columns.text-center
+        img(src="../images/icons/doctor1.png")
+        h2 Radiologist Workflow
+        p Follow along to see how a radiologist uses our technology.
+      .medium-9.centered.columns
+          .medium-8.medium-centered.columns
+            h4 Upload
+            p Radiologist uploads a patient's DICOM data to our cloud service from any web browser.
+            img(src="../images/ct.jpg" width="30%")
+          .medium-8.medium-centered.columns
+            hr
+            h4 Analyze
+            p Our algorithm inspects each pixel and classifies cancerer nodules in just seconds.
+          .medium-8.medium-centered.columns
+            hr
+            h4 Report
+            p A Fleischner Guided report is generated for each detected nodule, including recommended procedures. Color-coded images where nodules were found are generated.
+            img(src="../images/ct-analyzed-zoom.jpg" width="200%")
+  section.main-content.text-center.inverse
     .row
-      .medium-6.columns
-        .panel
-          img(src="../images/ct.png" width="50%" height="50%")
-      .medium-6.columns
-        .panel
-          img(src="../images/ct-analyzed.png" width="50%" height="50%")
-  div.intro5.text-center
+      .medium-6.medium-centered.columns
+        h2 How does analysis work?
+        p Our algorithm trains only from real chest CT studies. Each study has been annotated by 4 expert US radiologists and nodules are regressively identified.
+        p This is called <strong>semi-supervisied machine learning</strong>. 1000s of computers run in parallel analyzing this data and build a classification model. This can take days or even weeks.
+        p Our existing data set consists of over <strong>1000</strong> patients studies. Each patient has 2 studies. Over 8000 nodules were identified. The DICOM studies range from 100 to 300+ slices.
+        p We are always looking for new data to improve accuracy. If you can help, contact us.
+  section.main-content.text-center
     .row
-      .large-12.columns
-        h1 Computer science indistinguisble from magic.
-        p This is an intro section
+      .medium-8.medium-centered.columns
+        a(name="aboutus" data-magellan-destination="aboutus")
+        h2 Who We Are
+        h4 We are a small, technical team of machine vision and cloud computing experts. We're hugely passionate about medicine. In the past, we worked at <strong>Google, Microsoft</strong> and other tech companies. 
+        h4 Our advisory board is made up of <strong>expert pulmonologists <strong>and</strong> radiologists</strong> from US hospitals.
 block content
   mixin intros
 block footer

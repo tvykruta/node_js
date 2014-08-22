@@ -1,0 +1,33 @@
+extends layout
+block content
+  div
+    .inverse
+      .row
+        h2 Sign up for early access.
+    section
+      br
+      br
+      form(method="post", action="/signup")
+        .row
+          .medium-4.columns
+            input(type='text' placeholder='full name')
+        .row
+          .medium-4.columns
+            input(type='email' placeholder='email')
+        .row
+          .medium-4.columns
+            input(type='text' placeholder='company')
+        .row
+          .medium-4.columns
+            input(type='email' placeholder='describe your job')
+        .row
+          .medium-4.columns
+            input(type='text' placeholder='comments')
+        .row
+          .medium-4.columns
+            input(type='checkbox')
+        .row
+          .medium-4.columns
+              input.postfix.small.button.expand(type='submit' href="#" value='Submit')
+block footer
+  +footer-bar

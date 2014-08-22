@@ -11,7 +11,7 @@ mixin footer-bar
         ul.right
           li.divider
           li
-            a(href="#") Contact
+            a(href="/contact") Contact
           li.divider
 
 doctype
@@ -33,12 +33,13 @@ html
       section.top-bar-section
         ul.right
           li.divider
+          li
+            a(href="/signup") Signup
+          li.divider
           li.active
             a(href="/") Learn
           li.divider
-          li
-            a(href="/login") Login
-          li.divider
+
           li.has-dropdown
             a(href="#") Technology
             ul.dropdown 
@@ -46,8 +47,10 @@ html
                 a(href="machine") How our classifier works
           li.divider
           li
-            a(href="#") Contact
+            a(href="/contact") Contact
           li.divider
+          li
+            a(href="/login") Login
     .container
       block content
     footer

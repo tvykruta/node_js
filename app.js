@@ -44,6 +44,18 @@ app.get('/machine', function (req, res) {
   )
 })
 
+app.get('/contact', function (req, res) {
+  res.render('contact',
+  { title: 'Contact' }
+  )
+})
+
+app.get('/signup', function (req, res) {
+  res.render('signup',
+  { title: 'Signup' }
+  )
+})
+
 // Start server
 console.log("Server running at http://localhost:3000/");
 app.listen(3000)

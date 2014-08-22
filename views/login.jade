@@ -8,19 +8,18 @@ extends layout
  
 mixin login
   div
-    .row
-      br
-      br
-      br
+    .main-content
+     .row
       .small-6.small-centered.columns
-       .panel
         form(method="post", action="/login")
-          .row.collapse.margintop-20px
+          .row.collapse
             .small-4.medium-4.columns
-              input(type='text' placeholder='email')
+              input(type='email' placeholder='email')
             .small-4.medium-4.columns
-              input(type='text' placeholder='password')
+              input(type='password' placeholder='password')
             .small-4.medium-4.columns
               input.postfix.small.button.expand(type='submit' href="#" value='Login')
+    .main-content.inverse
+
 block content
   mixin login

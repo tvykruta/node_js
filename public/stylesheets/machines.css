@@ -33,24 +33,34 @@
 
 .main-content { 
   width: 100%; 
-  margin: 44px 0 22px;
-  padding-bottom: 22px; }
+  padding: 150px 0 150px;
+ }
+
 .main-content p strong {
-  font-size: 19px;
+  /*  font-size: 19px; */
+  color: darkorange;
+}
+.main-content p {
+  color: #6f6f6f;
 }
 .main-content h1, .main-content h2, .main-content h3, .main-content h4 {
-    font-style: normal;
-    font-weight: 300; }
+  font-style: normal;
+  font-weight: 300; }
 .main-content h1 {
   font-size: 2em;
   color: white;
   font-weight: 500;
   line-height: 100%; }
-.main-content h4 {
-  margin: 44px 0 22px;
-  padding-bottom: 22px; }
-.margin-top-40px {
-    margin-top: 40px; }
+
+.inverse, .inverse h1, .inverse h2, .minverse h3, .inverse h4, .inverse p {
+  color: white;
+  background-color: #008cba;
+}
+.inverse a {
+  color: white;
+  font-weight: normal;
+  text-decoration: underline;
+}
 
 .intro3 { 
   background-color: white;
@@ -81,7 +91,6 @@
 
 /* Action Panel */
 .action_panel {
-  margin-top: 20px;
   height: 280px;
 }
 .action_panel .panel {
@@ -97,17 +106,12 @@
   /*background-color:rgba(230,230,230,1.0);*/
   background-color: #222222;
 }
-/*
-.sub-nav {
-  .sub-nav dt,
-  .sub-nav dd,
-  .sub-nav li {
-    color: blue;
-    .sub-nav dt a,
-    .sub-nav dd a,
-    .sub-nav li a {
-      color: blue;
-    }
-  }
-}
-*/
+
+/* for login screen */
+input[type="email"],
+input[type="password"],
+textarea {
+  background-color: lightyellow; }
+
+.divider {
+  border-right: solid 1px #4e4e4e; }

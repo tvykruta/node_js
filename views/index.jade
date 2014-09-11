@@ -3,24 +3,26 @@ block vars
   - var slug='press'
   - var section='about'
   - var layout='left-sidebar'
- 
+
 extends layout
 
 mixin intros
   section.intro1
    .video-container
       video(id="video_background" src="../videos/stock-footage.mp4" autoplay loop poster="../videos/stock-footage-still.png")
-   .main-content
+   .intro1-inner-container
     .row
       .large-12.columns.text-center
         h1 MACHINE VISION IN MEDICAL IMAGING
+      hr
+      hr
       .large-12.columns.text-center
         a.button(href="/signup") Request an invite
   .text-center
       .row
         .large-12.columns
-          a.scroll(href="#mission")
-            img(src="../images/icons/down_small.png" alt="Scroll down.")
+          a.glow.scroll(href="#mission")
+            img(src="../images/icons/down.svg" alt="Scroll down.")
         .large-12.columns
           p Scroll down to learn more.
   section(data-magellan-expedition="fixed")

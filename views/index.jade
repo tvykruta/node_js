@@ -17,9 +17,11 @@ mixin intros
         a.button(href="/signup") Request an invite
   .text-center
       .row
-        .large-12.columns.text-center
-          a(href="#mission")
+        .large-12.columns
+          a.scroll(href="#mission")
             img(src="../images/icons/down_small.png" alt="Scroll down.")
+        .large-12.columns
+          p Scroll down to learn more.
   section(data-magellan-expedition="fixed")
     dl.sub-nav
       dd(data-magellan-arrival="mission")
@@ -32,6 +34,7 @@ mixin intros
         a(href="#why_we_exist") Why we exist
       dd(data-magellan-arrival="early_trials")
         a(href="#early_trials") Early Trials
+  a(id="mission") 
   section.main-content.text-center
     .row
       .medium-8.medium-centered.columns
@@ -120,7 +123,7 @@ mixin intros
       .medium-6.medium-centered.columns
         h2 How does analysis work?
         p Our algorithm trains only from real chest CT studies. Each study has been annotated by 4 expert US radiologists and nodules are regressively identified.
-        p This is called <strong>semi-supervisied machine learning</strong>. 1000s of computers run in parallel analyzing this data and build a classification model. This can take days or even weeks.
+        p We do what is called <strong>semi-supervisied machine learning</strong>. 1000s of computers run in parallel analyzing this data and build a classification model. This can take days or even weeks.
         p Our existing data set consists of over <strong>1000</strong> patients studies. Each patient has 2 studies. Over 8000 nodules were identified. The DICOM studies range from 100 to 300+ slices.
         p We are always looking for new data to improve accuracy. If you can help, contact us.
   section.main-content.text-center

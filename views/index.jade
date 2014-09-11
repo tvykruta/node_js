@@ -5,13 +5,14 @@ block vars
   - var layout='left-sidebar'
  
 extends layout
- 
+
 mixin intros
   section.intro1
+   .video-container
+      video(id="video_background" src="../videos/stock-footage.mp4" autoplay loop poster="../videos/stock-footage-still.png")
+   .main-content
     .row
-      .large-12.columns.video_background.text-center
-        video.video_scale(id="video_background" src="../videos/stock-footage.mp4" autoplay loop poster="../videos/stock-footage-still.png")
-      .large-12.columns.text-center.vertical-align
+      .large-12.columns.text-center
         h1 MACHINE VISION IN MEDICAL IMAGING
       .large-12.columns.text-center
         a.button(href="/signup") Request an invite

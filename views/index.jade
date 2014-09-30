@@ -1,5 +1,5 @@
 block vars
-  - var page_name='Machines In Medicine'
+  - var page_name='Operation Nicaragua'
   - var slug='press'
   - var section='about'
   - var layout='left-sidebar'
@@ -10,14 +10,29 @@ mixin intros
   section.intro1
    .video-container
       video(id="video_background" src="../videos/stock-footage.mp4" autoplay loop poster="../videos/stock-footage-still.png")
-   .intro1-inner-container
+   .intro1-inner-container.text-center
     .row
+      .large-12.columns
+       .special
+        h4 December 26th, 2014 to January 6th, 2015
+        h1 OPERATION NICARAGUA
+      br
+      br
       .large-12.columns.text-center
-        h1 MACHINE VISION IN MEDICAL IMAGING
-      hr
-      hr
-      .large-12.columns.text-center
-        a.button(href="/signup") Request an invite
+        a.button.radius.round(href="#" data-reveal-id="inviteCode") I have an invite code
+        .reveal-modal(id="inviteCode" data-reveal)
+          h2 This is a model.
+          h2.subtitle subtitle.
+          h2.small small title.
+          p paragraph.
+          a.close-reveal-modal &#215
+
+   .row.compact
+      .large-6.columns.mainpanel
+        h4 NICARAGUA BELIZE COSTA RICA<br>HONDURAS MEXICO GRAND CAYMANS
+   .row.compact
+      .large-6.columns.mainpanel.lower
+        h5 DEPARTURES FROM NEW YORK CITY AND MIAMI.
   .text-center
       .row
         .large-12.columns

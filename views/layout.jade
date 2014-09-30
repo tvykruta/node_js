@@ -3,7 +3,7 @@ mixin footer-bar
     nav.top-bar(data-topbar)
       ul.title-area
         li.name
-          h1#title Machines In Medicine
+          h1#title Operation Nicaragua
         li.toggle-topbar.menu-icon
           a(href="#")
             span Menu
@@ -17,7 +17,7 @@ mixin footer-bar
 doctype
 html
   head
-    title #{title} - Machines In Medicine
+    title #{title} - Operation Nicaragua
     link(rel='stylesheet', href='/foundation-5.3.3/css/foundation.css')
     link(rel='stylesheet', href='/stylesheets/machines.css')
     script(type='text/javascript' src='/foundation-5.3.3/js/vendor/modernizr.js')
@@ -26,7 +26,7 @@ html
       ul.title-area
         li.name
           h1
-            a(href="/") Machines In Medicine
+            a(href="/") Operation Nicaragua
         li.toggle-topbar.menu-icon
           a(href="#")
             span Menu
@@ -34,23 +34,36 @@ html
         ul.right
           li.divider
           li
-            a(href="/signup") Signup
+            a(href="/signup") This is some bullshit
           li.divider
           li.active
-            a(href="/") Learn
+            a(href="/") How Do I Join
           li.divider
 
           li.has-dropdown
-            a(href="#") Technology
+            a(href="#") Destinations
             ul.dropdown 
               li
-                a(href="machine") How our classifier works
+                a(href="machine") Nicaragua
+              li
+                a(href="machine") Honduras
+              li
+                a(href="machine") Costa Rica
+              li
+                a(href="machine") Mexico
+              li
+                a(href="machine") Belize
+          li.has-dropdown
+            a(href="#") Learn
+            ul.dropdown 
+              li
+                a(href="machine") Destinations
+              li
+                a(href="machine") Cost
           li.divider
           li
             a(href="/contact") Contact
           li.divider
-          li
-            a(href="/login") Login
     .container
       block content
     footer

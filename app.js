@@ -15,6 +15,12 @@ function compile(str, path) {
     .use(foundation());
 }
 
+// Asynchronous
+var auth = express.basicAuth(function(user, pass, callback) {
+ var result = (user === 'captainron' && pass === 'fantasticvoyage');
+ callback(null /* error */, result);
+});
+
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 
@@ -50,7 +56,7 @@ app.get('/contact', function (req, res) {
   )
 })
 
-app.get('/signup', function (req, res) {
+app.get('/signup', auth, function (req, res) {
   res.render('signup',
   { title: 'Signup' }
   )
